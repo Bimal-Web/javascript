@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BOM in javascript</title>
+</head>
+<body>
+  <h1>JavaScript BOM</h1>
+
+  <button onclick="showAlert()">Alert</button>
+  <button onclick="showConfirm()">Confirm</button>
+  <button onclick="showPrompt()">Prompt</button>
+  <button onclick="reloadPage()">Reload Page</button>
+  <button onclick="goBack()">Go Back</button>
+  <button onclick="goForward()">Go Forward</button>
+  <button onclick="showLocation()">Show Location</button>
+  <button onclick="showNavigator()">Show Navigator Info</button>
+  <button onclick="showScreen()">Show Screen Info</button>
+
+  <script>
+    function showAlert() {
+      alert("Hello from BOM!");
+    }
+
+    function showConfirm() {
+      let result = confirm("Do you want to continue?");
+      alert("Confirm result: " + result);
+    }
+
+    function showPrompt() {
+      let name = prompt("Enter your name:");
+      alert("You entered: " + name);
+    }
+
+    function reloadPage() {
+      location.reload();
+    }
+
+    function goBack() {
+      history.back();
+    }
+
+    function goForward() {
+      history.forward();
+    }
+
+    function showLocation() {
+      alert("Current URL: " + location.href);
+    }
+
+    function showNavigator() {
+      alert(
+        "User Agent: " + navigator.userAgent +
+        "\nLanguage: " + navigator.language +
+        "\nOnline: " + navigator.onLine
+      );
+    }
+
+    function showScreen() {
+      alert(
+        "Width: " + screen.width +
+        "\nHeight: " + screen.height +
+        "\nAvailable Width: " + screen.availWidth
+      );
+    }
+  </script>
+</body>
+</html>
